@@ -1,5 +1,5 @@
 fonster:
-  name: Fonster
+  name: Fönster
   entities:
     - switch.arbetsrum_fonster
     - switch.gastrum_fonster
@@ -7,7 +7,7 @@ fonster:
     - switch.vardagsrum_fonster
 
 alla_fonster:
-  name: Alla fonster
+  name: Alla fönster
   entities:
     - group.fonster
     - switch.sovrum_litet_fonster

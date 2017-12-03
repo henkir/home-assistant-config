@@ -71,7 +71,7 @@ sensor:
     151: Freezer
     135: Fridge
     only_named: True
-    temperature_scale: "C"
+    temperature_scale: "°C"
     datatype_mask: 3
 
 # Text to speech

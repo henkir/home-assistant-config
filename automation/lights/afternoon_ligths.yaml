@@ -1,4 +1,4 @@
-- alias: "Fonster eftermiddag"
+- alias: "Fönster eftermiddag"
   initial_state: 'on'
   trigger:
     platform: sun
@@ -10,7 +10,7 @@
       - group.fonster
       - switch.hall
 
-- alias: "Fonster kvall"
+- alias: "Fönster kväll"
   initial_state: 'on'
   trigger:
     platform: time
