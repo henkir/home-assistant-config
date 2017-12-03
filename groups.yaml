@@ -1,0 +1,23 @@
+fonster:
+  name: Fonster
+  entities:
+    - switch.arbetsrum_fonster
+    - switch.gastrum_fonster
+    - switch.kok_fonster
+    - switch.vardagsrum_fonster
+
+alla_fonster:
+  name: Alla fonster
+  entities:
+    - group.fonster
+    - switch.sovrum_litet_fonster
+    - switch.sovrum_stort_fonster
+
+vardagsrum:
+  name: Vardagsrum
+  entities:
+    - switch.vardagsrum_fonster
+    - switch.tvbelysning
+    - light.hue_color_1
+    - light.hue_color_2
+
