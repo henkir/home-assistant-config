@@ -1,0 +1,19 @@
+- alias: "Fönster morgon"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: "05:45:00"
+  action:
+    service: homeassistant.turn_on
+    entity_id:
+      - group.fonster
+
+- alias: "Fönster förmiddag"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '08:15:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id:
+      - group.fonster
