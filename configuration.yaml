@@ -59,12 +59,17 @@ tellstick:
 # Enables a map showing the location of tracked devices
 map:
 
+shopping_list:
+
 # Track the sun
 sun:
 
 # Weather prediction
 sensor:
   - platform: yr
+  - platform: time_date
+    display_options:
+      - time
   - platform: tellstick
     168: Outside
     167: Inside

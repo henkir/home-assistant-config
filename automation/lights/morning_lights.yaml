@@ -2,18 +2,32 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: "05:45:00"
+    at: "05:58:00"
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
-    service: homeassistant.turn_on
-    entity_id:
-      - group.fonster
+    service: script.turn_on
+    entity_id: script.turn_on_lights_morning
 
 - alias: "Fönster förmiddag"
   initial_state: 'on'
   trigger:
     platform: time
     at: '08:15:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
-    service: homeassistant.turn_off
-    entity_id:
-      - group.fonster
+    service: script.turn_off
+    entity_id: script.turn_off_lights_morning

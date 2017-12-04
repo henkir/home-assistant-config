@@ -1,0 +1,67 @@
+turn_on_lights_morning:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.arbetsrum_fonster
+    - delay: 00:00:08
+    - service: homeassistant.turn_on
+      entity_id: switch.vardagsrum_fonster
+    - delay: 00:00:04
+    - service: homeassistant.turn_on
+      entity_id: switch.kok_fonster
+    - delay: 00:00:05
+    - service: homeassistant.turn_on
+      entity_id: switch.gastrum_fonster
+
+turn_off_lights_morning:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.arbetsrum_fonster
+    - delay: 00:00:05
+    - service: homeassistant.turn_on
+      entity_id: switch.vardagsrum_fonster
+    - delay: 00:00:03
+    - service: homeassistant.turn_on
+      entity_id: switch.kok_fonster
+    - delay: 00:00:04
+    - service: homeassistant.turn_on
+      entity_id: switch.gastrum_fonster
+
+turn_on_lights_afternoon:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.kok_fonster
+    - delay: 00:00:05
+    - service: homeassistant.turn_on
+      entity_id: switch.gastrum_fonster
+    - delay: 00:00:06
+    - service: homeassistant.turn_on
+      entity_id: switch.vardagsrum_fonster
+    - delay: 00:00:08
+    - service: homeassistant.turn_on
+      entity_id: switch.arbetsrum_fonster
+    - delay: 00:00:06
+    - service: homeassistant.turn_on
+      entity_id: switch.sovrum_stort_fonster
+    - delay: 00:00:03
+    - service: homeassistant.turn_on
+      entity_id: switch.sovrum_litet_fonster
+
+turn_off_lights_evening:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.gastrum_fonster
+    - delay: 00:00:05
+    - service: homeassistant.turn_on
+      entity_id: switch.kok_fonster
+    - delay: 00:00:05
+    - service: homeassistant.turn_on
+      entity_id: switch.vardagsrum_fonster
+    - delay: 00:00:08
+    - service: homeassistant.turn_on
+      entity_id: switch.arbetsrum_fonster
+    - delay: 00:00:07
+    - service: homeassistant.turn_on
+      entity_id: switch.sovrum_stort_fonster
+    - delay: 00:00:02
+    - service: homeassistant.turn_on
+      entity_id: switch.sovrum_litet_fonster
