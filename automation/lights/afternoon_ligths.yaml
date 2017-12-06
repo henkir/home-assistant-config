@@ -11,6 +11,7 @@
       entity_id: switch.hall
 
 - alias: set_random_evening
+  hide_entity: True
   trigger:
     - platform: time
       at: '22:00:00'
