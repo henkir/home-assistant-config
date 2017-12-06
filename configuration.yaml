@@ -71,10 +71,10 @@ sensor:
     display_options:
       - time
   - platform: tellstick
-    168: Outside
-    167: Inside
-    151: Freezer
-    135: Fridge
+    168: Ute
+    167: Inne
+    151: Frys
+    135: Kyl
     only_named: True
     temperature_scale: "°C"
     datatype_mask: 3

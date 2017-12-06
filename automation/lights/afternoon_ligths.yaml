@@ -1,20 +1,34 @@
-- alias: "Fönster eftermiddag"
+- alias: "Fönster på eftermiddag"
   initial_state: 'on'
   trigger:
     platform: sun
     event: sunset
     offset: "-00:45:00"
   action:
-    service: homeassistant.turn_on
-    entity_id:
-      - group.fonster
-      - switch.hall
+    - service: script.turn_on
+      entity_id: script.turn_on_lights_afternoon
+    - service: homeassistant.turn_on
+      entity_id: switch.hall
 
-- alias: "Fönster kväll"
+- alias: set_random_evening
+  trigger:
+    - platform: time
+      at: '22:00:00'
+  action:
+    - service: input_slider.select_value
+      data_template:
+        entity_id: input_slider.random_hour
+        value: '23'
+    - service: input_slider.select_value
+      data_template:
+        entity_id: input_slider.random_minute
+        value: '{{ (range(00, 15)|random) }}'
+      
+- alias: "Fönster av kväll"
   initial_state: 'on'
   trigger:
-    platform: time
-    at: '23:00:00'
+    platform: template
+    value_template: "{{ is_state('sensor.time', states('input_slider.random_hour')|int ~ ':' ~ states('input_slider.random_minute')|int) }}"
   condition:
     condition: time
     weekday:
@@ -27,7 +41,7 @@
     service: script.turn_on
     entity_id: script.turn_off_lights_evening
 
-- alias: "Fönster sen kväll"
+- alias: "Fönster av sen kväll"
   initial_state: 'on'
   trigger:
     platform: time
