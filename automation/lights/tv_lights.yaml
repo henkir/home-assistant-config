@@ -40,7 +40,7 @@
       entity_id: switch.tvbelysning
 
 - alias: "Hue på kväll"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: sun
     event: sunset
@@ -55,7 +55,7 @@
         brightness: 77
 
 - alias: "Hue av kväll"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: "23:00:00"
@@ -74,7 +74,7 @@
         - light.hue_color_2
 
 - alias: "Hue av sen kväll"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: "00:30:00"

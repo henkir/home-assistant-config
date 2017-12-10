@@ -29,5 +29,5 @@
       - thu
       - fri
   action:
-    service: script.turn_off
+    service: script.turn_on
     entity_id: script.turn_off_lights_morning
