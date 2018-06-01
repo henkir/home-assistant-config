@@ -2,70 +2,72 @@ turn_on_lights_morning:
   alias: Lampor på morgon
   sequence:
     - service: homeassistant.turn_on
-      entity_id: switch.arbetsrum_fonster
-    - delay: 00:00:08
-    - service: homeassistant.turn_on
-      entity_id: switch.vardagsrum_fonster
+      entity_id: switch.switch_3
     - delay: 00:00:04
     - service: homeassistant.turn_on
-      entity_id: switch.kok_fonster
-    - delay: 00:00:05
+      entity_id: switch.switch_2
+    - delay: 00:00:09
     - service: homeassistant.turn_on
-      entity_id: switch.gastrum_fonster
+      entity_id: switch.switch_5
+    - delay: 00:00:04
+    - service: homeassistant.turn_on
+      entity_id: switch.switch_4
+    - delay: 00:00:06
+    - service: homeassistant.turn_on
+      entity_id: switch.switch
 
 turn_off_lights_morning:
   alias: Lampor av morgon
   sequence:
     - service: homeassistant.turn_off
-      entity_id: switch.arbetsrum_fonster
+      entity_id: switch.switch_2
     - delay: 00:00:05
     - service: homeassistant.turn_off
-      entity_id: switch.vardagsrum_fonster
+      entity_id: switch.switch_3
+    - delay: 00:00:14
+    - service: homeassistant.turn_off
+      entity_id: switch.switch_4
     - delay: 00:00:03
     - service: homeassistant.turn_off
-      entity_id: switch.kok_fonster
-    - delay: 00:00:04
+      entity_id: switch.switch_5
+    - delay: 00:00:05
     - service: homeassistant.turn_off
-      entity_id: switch.gastrum_fonster
+      entity_id: switch.switch
+
 
 turn_on_lights_afternoon:
   alias: Lampor på eftermiddag
   sequence:
     - service: homeassistant.turn_on
-      entity_id: switch.kok_fonster
-    - delay: 00:00:05
+      entity_id: switch.switch
+    - delay: 00:00:07
     - service: homeassistant.turn_on
-      entity_id: switch.gastrum_fonster
-    - delay: 00:00:06
-    - service: homeassistant.turn_on
-      entity_id: switch.vardagsrum_fonster
-    - delay: 00:00:08
-    - service: homeassistant.turn_on
-      entity_id: switch.arbetsrum_fonster
-    - delay: 00:00:06
-    - service: homeassistant.turn_on
-      entity_id: switch.sovrum_stort_fonster
+      entity_id: switch.switch_5
     - delay: 00:00:03
     - service: homeassistant.turn_on
-      entity_id: switch.sovrum_litet_fonster
+      entity_id: switch.switch_4
+    - delay: 00:00:13
+    - service: homeassistant.turn_on
+      entity_id: switch.switch_2
+    - delay: 00:00:04
+    - service: homeassistant.turn_on
+      entity_id: switch.switch_3
 
 turn_off_lights_evening:
   alias: Lampor av kväll
   sequence:
     - service: homeassistant.turn_off
-      entity_id: switch.gastrum_fonster
-    - delay: 00:00:05
+      entity_id: switch.switch_4
+    - delay: 00:00:04
     - service: homeassistant.turn_off
-      entity_id: switch.kok_fonster
-    - delay: 00:00:05
-    - service: homeassistant.turn_off
-      entity_id: switch.vardagsrum_fonster
+      entity_id: switch.switch_5
     - delay: 00:00:08
     - service: homeassistant.turn_off
-      entity_id: switch.arbetsrum_fonster
-    - delay: 00:00:07
+      entity_id: switch.switch
+    - delay: 00:00:19
     - service: homeassistant.turn_off
-      entity_id: switch.sovrum_stort_fonster
-    - delay: 00:00:02
+      entity_id: switch.switch_3
+    - delay: 00:00:05
     - service: homeassistant.turn_off
-      entity_id: switch.sovrum_litet_fonster
+      entity_id: switch.switch_2
+

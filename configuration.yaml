@@ -54,7 +54,7 @@ history:
 logbook:
 
 tellstick:
-  signal_repetitions: 10
+  signal_repetitions: 20
 
 # Enables a map showing the location of tracked devices
 map:

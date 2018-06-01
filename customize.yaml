@@ -1,0 +1,10 @@
+switch.switch:
+  friendly_name: Kök fönster
+switch.switch_2:
+  friendly_name: Gästrum fönster
+switch.switch_3:
+  friendly_name: Arbetsrum fönster
+switch.switch_4:
+  friendly_name: Matsal fönster
+switch.switch_5:
+  friendly_name: Vardagsrum fönster

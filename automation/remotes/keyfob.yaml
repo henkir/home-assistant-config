@@ -1,0 +1,111 @@
+- alias: "Fönster på"
+  hide_entity: True
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.fibaro_system_fgkf601_keyfob
+      scene_id: 2
+      scene_data: 7680
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.fonster
+
+- alias: "Fönster av"
+  hide_entity: True
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.fibaro_system_fgkf601_keyfob
+      scene_id: 1
+      scene_data: 7680
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.fonster
+
+- alias: "Fönster uppe på"
+  hide_entity: True
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.fibaro_system_fgkf601_keyfob
+      scene_id: 4
+      scene_data: 7680
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.ovanplan_fonster
+      
+- alias: "Fönster uppe av"
+  hide_entity: True
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.fibaro_system_fgkf601_keyfob
+      scene_id: 3
+      scene_data: 7680
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.ovanplan_fonster
+
+- alias: "Fönster nere på"
+  hide_entity: True
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.fibaro_system_fgkf601_keyfob
+      scene_id: 6
+      scene_data: 7680
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.bottenplan_fonster
+      
+- alias: "Fönster nere av"
+  hide_entity: True
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.fibaro_system_fgkf601_keyfob
+      scene_id: 5
+      scene_data: 7680
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.bottenplan_fonster
+      
+- alias: "Hue vardagsrum på"
+  hide_entity: True
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.fibaro_system_fgkf601_keyfob
+      scene_id: 8
+      scene_data: 7680
+  action:
+    service: homeassistant.turn_on
+    entity_id: group.hue_lampor
+      
+- alias: "Hue vardagsrum av"
+  hide_entity: True
+  initial_state: 'on'
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.fibaro_system_fgkf601_keyfob
+      scene_id: 7
+      scene_data: 7680
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.hue_lampor

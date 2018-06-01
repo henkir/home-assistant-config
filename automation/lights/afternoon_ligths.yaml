@@ -10,26 +10,11 @@
     - service: homeassistant.turn_on
       entity_id: switch.hall
 
-- alias: set_random_evening
-  hide_entity: True
-  trigger:
-    - platform: time
-      at: '22:00:00'
-  action:
-    - service: input_slider.select_value
-      data_template:
-        entity_id: input_slider.random_hour
-        value: '23'
-    - service: input_slider.select_value
-      data_template:
-        entity_id: input_slider.random_minute
-        value: '{{ (range(00, 15)|random) }}'
-      
 - alias: "Fönster av kväll"
   initial_state: 'on'
   trigger:
-    platform: template
-    value_template: "{{ is_state('sensor.time', states('input_slider.random_hour')|int ~ ':' ~ states('input_slider.random_minute')|int) }}"
+    platform: time
+    at: '23:30:00'
   condition:
     condition: time
     weekday:
