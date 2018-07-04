@@ -1,0 +1,75 @@
+- alias: Tvättmaskin kör vid strömförbrukning
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.fibaro_switch_1_power
+      above: 10
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.tvattmaskin_status
+        state: Inaktiv
+      - condition: state
+        entity_id: sensor.tvattmaskin_status
+        state: Ren
+      - condition: state
+        entity_id: sensor.tvattmaskin_status
+        state: Avslutar
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.tvattmaskin_status
+        option: Kör
+
+- alias: Tvättmaskin avslutar när strömmen sjunker
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.fibaro_switch_1_power
+      below: 6
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.tvattmaskin_status
+        state: Kör
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.tvattmaskin_status
+        option: Avslutar
+
+- alias: Tvättmaskin ren efter en timeout
+  trigger:
+    - platform: state
+      entity_id: input_select.tvattmaskin_status
+      to: Avslutar
+      for:
+        minutes: 3
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.tvattmaskin_status
+        state: Avslutar
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.tvattmaskin_status
+        option: Ren
+
+- alias: Skicka notifiering när tvättmaskinen är ren
+  trigger:
+    - platform: state
+      entity_id: input_select.tvattmaskin_status
+      to: Ren
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_select.tvattmaskin_status
+        state: Ren
+  action:
+    - service: notify.phil
+      data:
+        message: 'Tvättmaskinen är klar!'
+        title: 'Tvättmaskinsuppdatering'

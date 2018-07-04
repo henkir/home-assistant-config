@@ -1,0 +1,8 @@
+tvattmaskin_status:
+  name: Tvättmaskin status
+  options:
+    - Inaktiv
+    - Kör
+    - Avslutar
+    - Ren
+  initial: Inaktiv
