@@ -34,6 +34,29 @@ turn_off_lights_morning:
     - service: homeassistant.turn_off
       entity_id: switch.switch
 
+turn_on_lights_downstairs_morning:
+  alias: Lampor på nere morgon
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: switch.switch_5
+    - delay: 00:00:04
+    - service: homeassistant.turn_on
+      entity_id: switch.switch_4
+    - delay: 00:00:06
+    - service: homeassistant.turn_on
+      entity_id: switch.switch
+
+turn_off_lights_downstairs_morning:
+  alias: Lampor av nere morgon
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: switch.switch_4
+    - delay: 00:00:03
+    - service: homeassistant.turn_off
+      entity_id: switch.switch_5
+    - delay: 00:00:05
+    - service: homeassistant.turn_off
+      entity_id: switch.switch
 
 turn_on_lights_afternoon:
   alias: Lampor på eftermiddag
