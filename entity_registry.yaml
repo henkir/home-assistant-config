@@ -1,0 +1,108 @@
+zwave.zstick:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.fibaro_switch_1:
+  name:
+  platform: zwave
+  unique_id: node-2
+switch.fibaro_switch_1_switch:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076282880
+sensor.fibaro_switch_1_power:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479554
+sensor.fibaro_switch_1_energy:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076495874
+sensor.fibaro_switch_1_power_2:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076496002
+sensor.fibaro_switch_1_exporting:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076496384
+sensor.fibaro_switch_1_alarm_type:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528065
+sensor.fibaro_switch_1_alarm_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528081
+sensor.fibaro_switch_1_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528097
+sensor.fibaro_switch_1_power_management:
+  name:
+  platform: zwave
+  unique_id: 2-72057594077528241
+media_player.vardagsrum:
+  name:
+  platform: cast
+  unique_id: 38f621ec-8d5f-8e57-6b2a-a4a79823d3b4
+light.hue_color_lamp_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:01:89:0b-0b
+light.tradfri_ambiance_1:
+  name:
+  platform: hue
+  unique_id: 00:0b:57:ff:fe:b8:89:d8-01
+light.hue_color_2:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:01:89:dd-0b
+light.hue_color_1:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:03:01:87:2c-0b
+switch.switch:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093060096
+zwave.telldus_tzwp100_plugin_switch:
+  name: Kök fönster
+  platform: zwave
+  unique_id: node-3
+switch.switch_2:
+  name:
+  platform: zwave
+  unique_id: 4-72057594109837312
+switch.switch_3:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126614528
+switch.switch_4:
+  name:
+  platform: zwave
+  unique_id: 6-72057594143391744
+switch.switch_5:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160168960
+zwave.arbetsrum_fonster:
+  name:
+  platform: zwave
+  unique_id: node-4
+zwave.telldus_tzwp100_plugin_switch_2:
+  name:
+  platform: zwave
+  unique_id: node-5
+zwave.telldus_tzwp100_plugin_switch_3:
+  name:
+  platform: zwave
+  unique_id: node-6
+zwave.telldus_tzwp100_plugin_switch_4:
+  name:
+  platform: zwave
+  unique_id: node-7
+zwave.fibaro_system_fgkf601_keyfob:
+  name:
+  platform: zwave
+  unique_id: node-8
