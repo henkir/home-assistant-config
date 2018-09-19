@@ -1,0 +1,39 @@
+- alias: "Vardagsrum på eftermiddag"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '19:00:00'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: light.hue_color_2
+
+- alias: "Vardagsrum av kväll"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '23:00:00'
+  condition:
+    condition: time
+    weekday:
+      - sun
+      - mon
+      - tue
+      - wed
+      - thu
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.hue_color_2
+
+- alias: "Vardagsrum av sen kväll"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '00:30:00'
+  condition:
+    condition: time
+    weekday:
+      - sat
+      - sun
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.hue_color_2
