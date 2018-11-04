@@ -1,8 +1,7 @@
 - alias: Tvättmaskin kör vid strömförbrukning
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.fibaro_switch_1_power
-      above: 10
+    - platform: template
+      value_template: "{{ states.sensor.fibaro_switch_1_power.state | float > 10 }}"
   condition:
     condition: or
     conditions:
@@ -23,9 +22,8 @@
 
 - alias: Tvättmaskin avslutar när strömmen sjunker
   trigger:
-    - platform: numeric_state
-      entity_id: sensor.fibaro_switch_1_power
-      below: 6
+    - platform: template
+      value_template: "{{ states.sensor.fibaro_switch_1_power.state | float < 6 }}"
   condition:
     condition: and
     conditions:
