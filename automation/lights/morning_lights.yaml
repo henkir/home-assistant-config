@@ -65,3 +65,21 @@
   action:
     service: script.turn_on
     entity_id: script.turn_off_lights_downstairs_morning
+
+- alias: "Vardagsrum på morgon"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '05:50:00'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: light.hue_color_2
+
+- alias: "Vardagsrum av morgon"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '07:15:00'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: light.hue_color_2
