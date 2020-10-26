@@ -1,3 +1,37 @@
+- alias: "Kök på morgon"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: "05:10:00"
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: switch.turn_on
+    entity_id: switch.switch
+
+- alias: "Kök av förmiddag"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: "07:45:00"
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: switch.turn_off
+    entity_id: switch.switch
+
 - alias: "Fönster på morgon"
   initial_state: 'off'
   trigger:
@@ -33,10 +67,10 @@
     entity_id: script.turn_off_lights_morning
 
 - alias: "Fönster på nere morgon"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
-    at: "05:48:00"
+    at: "05:20:00"
   condition:
     condition: time
     weekday:
@@ -53,8 +87,8 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '08:15:00'
-  condition:
+    at: "07:45:00"
+  action:
     condition: time
     weekday:
       - mon
@@ -70,7 +104,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '05:50:00'
+    at: '05:10:00'
   action:
     - service: homeassistant.turn_on
       entity_id: light.hue_color_2
