@@ -73,8 +73,8 @@ sensor:
   - platform: tellstick
     168: Ute
     167: Inne
-    151: Frys
-    135: Kyl
+    151: Kyl
+    135: Frys
     only_named: True
     temperature_scale: "°C"
     datatype_mask: 3
@@ -93,3 +93,7 @@ script: !include scripts.yaml
 input_select: !include input_select.yaml
 
 python_script:
+
+recorder:
+  purge_keep_days: 62
+
