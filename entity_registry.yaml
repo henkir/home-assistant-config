@@ -106,3 +106,7 @@ zwave.fibaro_system_fgkf601_keyfob:
   name:
   platform: zwave
   unique_id: node-8
+media_player.onkyo_txrz710_e0ef16:
+  name:
+  platform: cast
+  unique_id: 62890b90-1363-4c27-9aee-2f53b7464c6d
