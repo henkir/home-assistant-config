@@ -2,7 +2,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: "05:10:00"
+    at: "06:00:00"
   condition:
     condition: time
     weekday:
@@ -19,7 +19,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: "07:45:00"
+    at: "08:30:00"
   condition:
     condition: time
     weekday:
@@ -104,7 +104,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '05:10:00'
+    at: '06:00:00'
   action:
     - service: homeassistant.turn_on
       entity_id: light.hue_color_2
@@ -113,7 +113,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '07:15:00'
+    at: '08:15:00'
   action:
     - service: homeassistant.turn_off
       entity_id: light.hue_color_2
