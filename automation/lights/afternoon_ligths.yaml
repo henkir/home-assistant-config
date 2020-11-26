@@ -40,3 +40,21 @@
   action:
     service: script.turn_on
     entity_id: script.turn_off_lights_evening
+
+- alias: "Spritskåp på"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '18:00:00'
+  action:
+    service: switch.turn_on
+    entity_id: swtich.spritskap
+
+- alias: "Spritskåp av"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '23:00:00'
+  action:
+    service: switch.turn_off
+    entity_id: swtich.spritskap
