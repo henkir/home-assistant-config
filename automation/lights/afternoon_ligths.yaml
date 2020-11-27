@@ -47,8 +47,8 @@
     platform: time
     at: '18:00:00'
   action:
-    service: switch.turn_on
-    entity_id: swtich.spritskap
+    service: homeassistant.turn_on
+    entity_id: switch.spritskap
 
 - alias: "Spritskåp av"
   initial_state: 'on'
@@ -56,5 +56,5 @@
     platform: time
     at: '23:00:00'
   action:
-    service: switch.turn_off
-    entity_id: swtich.spritskap
+    service: homeassistant.turn_off
+    entity_id: switch.spritskap

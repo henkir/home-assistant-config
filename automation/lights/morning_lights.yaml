@@ -84,7 +84,7 @@
     entity_id: script.turn_on_lights_downstairs_morning
 
 - alias: "Fönster av nere förmiddag"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: "07:45:00"
