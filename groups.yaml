@@ -1,11 +1,3 @@
-gamla_fonster:
-  name: Gamla Fönster
-  entities:
-    - switch.arbetsrum_fonster
-    - switch.gastrum_fonster
-    - switch.kok_fonster
-    - switch.vardagsrum_fonster
-
 bottenplan_fonster:
   name: Bottenvåning fönster
   entities:
@@ -25,19 +17,13 @@ fonster:
     - group.ovanplan_fonster
     - group.bottenplan_fonster
     
-alla_fonster:
-  name: Alla fönster
-  entities:
-    - group.fonster
-    - switch.sovrum_litet_fonster
-    - switch.sovrum_stort_fonster
-
 vardagsrum:
   name: Vardagsrum
   entities:
     - switch.switch_5
     - light.hue_color_1
     - light.hue_color_2
+    - switch.julgran
 
 hue_lampor:
   name: Hue-lampor
