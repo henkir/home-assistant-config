@@ -55,11 +55,11 @@ light.tradfri_ambiance_1:
   platform: hue
   unique_id: 00:0b:57:ff:fe:b8:89:d8-01
 light.hue_color_2:
-  name:
+  name: Rislampa
   platform: hue
   unique_id: 00:17:88:01:03:01:89:dd-0b
 light.hue_color_1:
-  name:
+  name: Läslampa
   platform: hue
   unique_id: 00:17:88:01:03:01:87:2c-0b
 switch.switch:

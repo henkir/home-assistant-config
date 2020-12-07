@@ -63,7 +63,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '16:00:00'
+    at: '16:01:00'
   action:
     service: homeassistant.turn_on
     entity_id: switch.julgran
@@ -72,7 +72,7 @@
   initial_state: 'on'
   trigger:
     platform: time
-    at: '23:00:00'
+    at: '23:01:00'
   action:
     service: homeassistant.turn_off
     entity_id: switch.julgran
