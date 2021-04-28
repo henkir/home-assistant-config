@@ -42,9 +42,8 @@
 - alias: "Hue på kväll"
   initial_state: 'on'
   trigger:
-    platform: sun
-    event: sunset
-    offset: "00:15:00"
+    platform: time
+    at: "18:00:00"
   action:
     - service: light.turn_on
       entity_id:
@@ -54,8 +53,33 @@
         rgb_color: [174, 140, 79]
         brightness: 77
 
-- alias: "Hue av kväll"
+- alias: "Hue dämpad på kväll"
   initial_state: 'on'
+  trigger:
+    platform: time
+    at: "21:00:00"
+  action:
+    - service: light.turn_on
+      entity_id:
+#        - light.hue_color_1
+        - light.hue_color_2
+      data:
+        rgb_color: [174, 140, 79]
+        brightness: 20
+
+- alias: "Hue av natt"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: "23:00:00"
+  action:
+    - service: light.turn_off
+      entity_id:
+ #       - light.hue_color_1
+        - light.hue_color_2
+
+- alias: "Hue av kväll"
+  initial_state: 'off'
   trigger:
     platform: time
     at: "23:00:00"
@@ -74,7 +98,7 @@
         - light.hue_color_2
 
 - alias: "Hue av sen kväll"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: "00:30:00"

@@ -1,5 +1,5 @@
 - alias: "Vardagsrum på eftermiddag"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: '17:05:00'
@@ -8,7 +8,7 @@
       entity_id: light.hue_color_2
 
 - alias: "Vardagsrum av kväll"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: '23:00:00'
@@ -25,7 +25,7 @@
     entity_id: light.hue_color_2
 
 - alias: "Vardagsrum av sen kväll"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: '00:30:00'
