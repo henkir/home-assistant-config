@@ -110,3 +110,11 @@ media_player.onkyo_txrz710_e0ef16:
   name:
   platform: cast
   unique_id: 62890b90-1363-4c27-9aee-2f53b7464c6d
+media_player.vardagsrum_tv:
+  name:
+  platform: cast
+  unique_id: d1c9ea23-1e37-6404-e0f3-c9213bd933a5
+sensor.fibaro_system_fgwpef_wall_plug_gen5_distance:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479810
