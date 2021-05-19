@@ -10,11 +10,20 @@
     - service: homeassistant.turn_on
       entity_id: switch.hall
 
-- alias: "Fönster av kväll"
+- alias: "Fönster av uppe kväll"
   initial_state: 'on'
   trigger:
     platform: time
-    at: '23:30:00'
+    at: '22:30:00'
+  action:
+    service: homeassistant.turn_off
+    entity_id: group.ovanplan_fonster
+
+- alias: "Fönster av nere kväll"
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '23:55:00'
   condition:
     condition: time
     weekday:
@@ -24,22 +33,22 @@
       - wed
       - thu
   action:
-    service: script.turn_on
-    entity_id: script.turn_off_lights_evening
+    service: homeassistant.turn_off
+    entity_id: group.bottenplan_fonster
 
-- alias: "Fönster av sen kväll"
+- alias: "Fönster av nere sen kväll"
   initial_state: 'on'
   trigger:
     platform: time
-    at: '00:30:00'
+    at: '01:00:00'
   condition:
     condition: time
     weekday:
       - sat
       - sun
   action:
-    service: script.turn_on
-    entity_id: script.turn_off_lights_evening
+    service: homeassistant.turn_off
+    entity_id: group.bottenplan_fonster
 
 - alias: "Spritskåp på"
   initial_state: 'on'
@@ -60,7 +69,7 @@
     entity_id: switch.spritskap
 
 - alias: "Julgran på"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: '16:01:00'
@@ -69,7 +78,7 @@
     entity_id: switch.julgran
 
 - alias: "Julgran av"
-  initial_state: 'on'
+  initial_state: 'off'
   trigger:
     platform: time
     at: '23:01:00'
