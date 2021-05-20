@@ -71,13 +71,17 @@ sensor:
     display_options:
       - time
   - platform: tellstick
-    168: Ute
-    167: Inne
-    151: Kyl
-    135: Frys
-    only_named: True
     temperature_scale: "°C"
     datatype_mask: 3
+    only_named:
+      - id: 168
+        name: Ute
+      - id: 167
+        name: Inne
+      - id: 151
+        name: Kyl
+      - id: 135
+        name: Frys
 
 # Text to speech
 tts:
